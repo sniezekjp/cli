@@ -5,6 +5,7 @@ import BundleCommand from './commands/bundle';
 import InitCommand from './commands/init';
 import NewCommand from './commands/new';
 import GenerateCommand from './commands/generate';
+import AddCommand from './commands/add';
 
 class Aurelia {
   constructor() {
