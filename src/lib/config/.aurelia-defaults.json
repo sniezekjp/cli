@@ -1,0 +1,21 @@
+{
+  "paths":{
+    "plugins":"/.aurelia/plugins",
+    "commands":"/.aurelia/commands",
+    "templates":"/.aurelia/templates",
+    "config":"/.aurelia/config.json",
+    "tasks":"/build/tasks",
+    "source":"/src",
+    "output":"/dist",
+    "jspm":"/jspm_packages/project-plugins"
+  },
+  "env":{
+    "dev":true,
+    "prod":false,
+    "testing":false,
+    "plugin":null
+  },
+  "commands":{},
+  "plugins":{},
+  "linked":{}
+}

@@ -51,11 +51,15 @@ cli.launch({
 
 function handleCommands(env) {
   var aurelia;
+  var store = require('../src/lib/config').default;
+
 
   if (process.cwd() !== env.cwd) {
     process.chdir(env.cwd);
     logger.info('Working directory changed to: `%s`', env.cwd);
   }
+  var environmentPath = process.cwd() + '/.aurelia/config.json';
+  store.registerDefaults(environmentPath, '.aurelia-defaults.json');
 
   if (!env.modulePath) {
     logger.log('warn', 'Local aurelia installation not found!');
@@ -63,6 +67,7 @@ function handleCommands(env) {
   } else {
     aurelia = require(env.modulePath);
   }
+
 
   aurelia.init({
     env : env
