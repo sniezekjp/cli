@@ -27,6 +27,7 @@ export default class InitCommand {
 
   }
   action(argv, options, answers){
+
     if (!argv.env) {
       console.log(argv);
       return new ConfigFile(this.globalConfig);

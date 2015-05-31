@@ -1,7 +1,7 @@
 import {command, option, description, arg, instance} from 'aurelia-command';
 import path from 'path';
 import {map, extend} from 'lodash';
-import {ask} from '../lib/ask';
+import ask from '../lib/ask';
 import Generator from '../lib/generator/create';
 
 @command('add')
@@ -9,7 +9,6 @@ import Generator from '../lib/generator/create';
 @option('-r, --repo', 'Create a new aurelia-plugin repo')
 @instance(Generator)
 export default class AddCommand{
-
 
   constructor(config, logger, generator){
     this.globalConfig = config;
@@ -29,7 +28,7 @@ export default class AddCommand{
   }
 
   action(argv, options, answers){
-    return this.generator.create(answers);
+    return this.generator.generate(answers);
   }
 
   afterAction(argv, options, result) {
